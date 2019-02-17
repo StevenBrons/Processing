@@ -1,0 +1,67 @@
+\newcommand{\tttt}{Recursie}
+\newcommand{\dddd}{Datum 1}
+
+\input{header.tex}
+
+\section{Leerdoelen}
+\begin{itemize}
+    \item Methods met \texttt{return} van type \texttt{int}
+    \item Printen naar het console door middel van \texttt{System.out.println()}
+    \item Het recursief aanroepen van methods
+    \item Het recursief tekenen van simpele fractels
+\end{itemize}
+\section{Recursie}
+\subsection{Recursieve functies}
+Recursieve functies zijn functies die een (makkelijkere) versie van zichzelf gebruiken voor het bereken van een antwoord. Kijk bijvoorbeeld naar:
+\[f(g,n) = \begin{cases}
+        $1 \qquad\qquad\qquad n = 0$\\
+        $g * f(n-1)  \qquad n $>$ 0$
+    \end{cases}
+   \]
+Deze functie geeft $f(g,n) = g^n$. Als we dit uitschrijven krijgen we: $f(3,4) = 3 * f(3) = 3 * 3 * f(2) = 3 * 3 * 3 * f(1) = 3 * 3 * 3 * 3 * f(0) = 3 * 3 * 3 * 3 * 1 = 81 = 3^4$
+\[g(n) = \begin{cases}
+        $1 \qquad\qquad\qquad n = 0$\\
+        $n * g(n-1)  \qquad n $>$ 0$
+    \end{cases}
+   \]
+Schrijf de uitwerking van $g(5)$ helemaal uit. Weet je ook welke functie $g$ is?
+\[h(n) = \begin{cases}
+        $1 \qquad\qquad\qquad n = 0$\\
+        $1 \qquad\qquad\qquad n = 1$\\
+        $h(n - 1) + h(n - 2)  \qquad n $>$ 1$
+    \end{cases}
+   \]
+Schrijf de uitwerking van $h(4)$ helemaal uit. Weet je ook welke functie $h$ is?
+
+\subsection{Factorial}
+Maak een recursieve functie die de \textit{factorial} van een getal berekent. (Zie \texttt{f} van de vorige opdracht). 
+\begin{lstlisting}
+int factorial(int n) {
+}
+\end{lstlisting}
+Roep de functie aan in \texttt{setup} en print het resultaat. 
+
+\subsection{Codeer Koch's Curve}
+Maak een functie 
+\begin{lstlisting}
+    void KochCurve(int n,int x, int y, int l) {
+    }
+\end{lstlisting}
+die Koch's Curve \texttt{n} diep, beginnend op \texttt{x,y} en eindiged op \texttt{x+l,y}.
+
+\subsection{Codeer een Binary Tree}
+Maak een method
+\begin{lstlisting}
+void binaryTree(int n,int x, int y) {
+}
+\end{lstlisting}
+Die een \textbf{binary tree} tekent van \texttt{n} diep. Op de co\"ordinaten \texttt{x, y}.
+
+\subsection{Codeer een Sierpinski Triangle}
+
+\subsection{[Bonus] Koch's Snowflake}
+
+\subsection{[Bonus] Hilbert's Curve}
+
+
+\input{footer.tex}

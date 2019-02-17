@@ -1,0 +1,78 @@
+\newcommand{\tttt}{Recursie}
+\newcommand{\dddd}{Datum 1}
+
+\input{header.tex}
+
+\section{Leerdoelen}
+Deze week leer je omgaan met de volgende concepten:
+\begin{itemize}
+    \item Variabelen: \texttt{int}
+    \item Standaard Methods: \texttt{size(), circle(), random(),int(),fill()}
+    \item Globale variablen: \texttt{width, height, mouseX, mouseY}
+    \item Het aanroepen van methods
+    \item Het maken van eigen methods
+    \item Het gebruiken van for-loops
+\end{itemize}
+
+\section{Do you want to build a snowman?}
+Je gaat de eerste code schrijven! Zorg ervoor je een nieuwe \textit{sketch} aanmaakt.
+\subsection{Een cirkel}
+Plak de volgende code in je lege sketch. Run de sketch om te kijken wat dit doet!
+\begin{lstlisting}
+void setup() {
+    size(500,500);
+    circle(100,100,70);
+}
+void draw() {
+}
+\end{lstlisting}
+Pas de code aan zodat de cirkel in het midden van het scherm staat.
+\subsection{Het midden}
+Als je de grote van het scherm aanpast (pas de arguments van \texttt{size} aan), zul je zien dat de cirkel niet meer in het midden staat.
+Gebruik de variabelen \texttt{width} en \texttt{height} om het midden van het scherm te berekenen. Zorg ervoor dat de cirkel in het midden van het scherm blijft staan, onafhankelijk van de grote van het scherm.
+\subsection{Een sneeuwpop}
+Maak een sneeuwpop door twee cirkels half-boven de eerste cirkel te tekenen. Zorg ervoor dat deze cirkels ook op de juiste plek blijven staan als je de schermgrootte veranderd!
+\subsection{Een method}
+Het tekenen van de sneeuwpop is een simpel \textbf{algoritme}. Als je een programma wil maken is het enorm belangrijk je het op te delen. Dit opdelen gebeurd onder meer door het maken van \textbf{methods}. Plaats de volgende method \textbf{helemaal onderaan} je de sketch.
+\begin{lstlisting}
+void drawSnowman(int x, int y) {
+}
+\end{lstlisting}
+Plaats de volgende regel code onderaan in \texttt{setup}.
+\begin{lstlisting}
+    drawSnowman(int(random(width)),int(random(height)));
+\end{lstlisting}
+Verplaats het tekenen van je sneeuwpop naar de \texttt{drawSnowman} method. Het is belangrijk dat je de sneeuwman op de co\"ordinaten \texttt{x,y} plaatst.
+
+\subsection{Meer sneeuwpoppen}
+Maak een \texttt{for} loop in de \texttt{setup} die 10 sneeuwpoppen op willekeurige plekken op het scherm plaatst.
+\subsection{Gekleurde sneeuwpoppen}
+In de wereld van code kan alles! Waarom zouden we ons limiteren tot witte sneeuwpoppen?
+Zorg ervoor dat alle sneeuwpoppen verschillende kleuren hebben!
+\subsection{Nog meer sneeuwpoppen}
+Voeg de volgende method toe:
+\begin{lstlisting}
+    void mouseClicked() {
+    }
+\end{lstlisting}
+Deze method word uitgevoerd op het moment dat je met de muis op de sketch klikt. Zorg ervoor dat er een sneeuwpop op de plek van de muis verschijnt als je klikt. (tip: zoek op het internet naar een manier om de muis co\"ordinaten te krijgen)
+\subsection{[Bonus] Hogere sneeuwmannen}
+Pas de method \texttt{drawSnowman} aan zodat er nog een derde variable is:
+\begin{lstlisting}
+    void drawSnowman(int x, int y, int n) {
+    }
+\end{lstlisting}
+Deze derde variable geeft de hoogte van de sneeuwpop aan. Zorg ervoor dat ook de hoogte (het aantal cirkels) variabel is! Let op! De cirkels moeten zowel kleiner worden, als boven op elkaar gestapeld worden! Zorg dat je ook 100-ballen-hoge sneeuwpoppen kunt maken! Pas vervolgens 
+\begin{lstlisting}
+    drawSnowman(int(random(width)),int(random(height)));
+\end{lstlisting}
+aan zodat de sneeuwpoppen tussen de \texttt{2} en \texttt{6} hoog zijn.
+\subsection{[Bonus] Sneeuwmannen dans}
+Maak de method \texttt{makeCirle}, met als parameters een \texttt{int n}
+\begin{lstlisting}
+    void makeCircle(int n) {
+    }
+\end{lstlisting}
+Deze method moet \texttt{n} sneeuwmannen in een cirkel om het midden van het scherm tekenen. De sneeuwmannen moeten allemaal op gelijke afstand van elkaar staan.
+
+\input{footer.tex}
