@@ -5,7 +5,8 @@
 
 \section{Leerdoelen}
 \begin{itemize}
-	\item Omgaan met de \texttt{PVector} class
+	\item \texttt{x,y} co\"ordinaten om kunnen zetten in de \texttt{PVector} objecten.
+	\item Gebruik kunnen maken van de volgende PVector methods: \texttt{add(PVector p), sub(PVector p), mult(float amount), rotate(float angle)}
 \end{itemize}
 
 \section{Vectoren}
@@ -63,7 +64,7 @@ De tweede rekenregel heet \textit{scalaire vermenigvuldiging}. Dit geeft het uit
 	\item Teken de optelling van $\begin{pmatrix}2\\1\end{pmatrix}+\begin{pmatrix}-1\\3\end{pmatrix}$
 	\item Bereken $2*((3*\vec{a})+\vec{b})$ met $\vec{a}=\begin{pmatrix}1\\2\end{pmatrix}$ en $\vec{b} = \begin{pmatrix}-1\\2\end{pmatrix}$
 	\item Bepaal het midden tussen $\vec{a}$ en $\vec{b}$. (We zoeken dus een algemene formule voor het midden tussen twee vectoren).
-	\item Bereken het punt op $\frac{2}{3}$ afstand tussen $\vec{a}$ en $\vec{b}$ (Wederom zoeken we dus een algemene formule).
+	\item Bereken de vector op $\frac{2}{3}$ afstand tussen $\vec{a}$ en $\vec{b}$ (Wederom zoeken we dus een algemene formule).
 \end{enumerate}
 
 \subsection{PVector}
@@ -85,12 +86,18 @@ Processing heeft de class \texttt{PVector}, met daarin een heleboel handige meth
 \end{lstlisting}
 \textbf{Let op! De oorsprong (0,0) zit bij computers links boven, en niet links onder zoals bij de meeste wiskundige grafieken! De y-as is als het ware gespiegeld!}\\
 Op welke co\"ordinaten tekent dit stukje code een stip?
-Schrijf je antwoord in een comment van je sketch:
+Schrijf je antwoord in een \textit{comment} van je sketch:
+
+\subsection{Polygoon}
+Een gelijkzijdige polygoon of veelhoek is een figuur met \texttt{n} hoeken en lijnstukken van gelijke lengte. Voor \texttt{n = 3} is dit een \textit{driehoek}, voor \texttt{n = 4} is dit een \textit{vierkant}, voor \texttt{n = 5} is dit een \textit{pentagon} en voor \texttt{n = 17} is dit een \textit{heptadecagoon}. Maak de volgende functie:
 \begin{lstlisting}
-	// dit is een comment
-	// alles na de twee slashes word door 
-	// Processing overgeslagen!
+	void polygon(PVector center, int radius, int n) {
+	}
 \end{lstlisting}
+Deze functie moet een polygoon van \texttt{int n} hoeken tekenen met een straal van \texttt{int radius}. Maak gebruik van vectoren en gebruik de \texttt{rotate(float angle)} method. \\
+\textbf{Let op!} Een hoek wordt niet in graden uitgedrukt maar in radialen, dit betekent dat \'e\'en cirkel (dus 360 graden) gelijk is aan $2 * \pi$, ofwel: \texttt{2 * PI}.
+
+
 
 
 \input{footer.tex}
