@@ -96,8 +96,37 @@ Een gelijkzijdige polygoon of veelhoek is een figuur met \texttt{n} hoeken en li
 \end{lstlisting}
 Deze functie moet een polygoon van \texttt{int n} hoeken tekenen met een straal van \texttt{int radius}. Maak gebruik van vectoren en gebruik de \texttt{rotate(float angle)} method. \\
 \textbf{Let op!} Een hoek wordt niet in graden uitgedrukt maar in radialen, dit betekent dat \'e\'en cirkel (dus 360 graden) gelijk is aan $2 * \pi$, ofwel: \texttt{2 * PI}.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{polygon.png}
+	\label{fig:polygon}
+	\caption{Polygonen met n = 3, 4, 5 en 17}
+\end{figure}
 
 
+\section{Middelloodlijn}
+Maak de volgende functie aan:
+\begin{lstlisting}
+	void bisector(PVector p1, PVector p2) {
+	}
+\end{lstlisting}
+Deze functie moet de middelloodlijn tekenen van de twee functies met de lengte gelijk aan de afstand tussen de twee functies (zie figuur \ref{fig:bisector}). \textbf{Tip:} Probeer eerst op papier een aantal middelloodlijnen te tekenen en probeer vervolgens om de twee punten waartussen de lijn getrokken moet worden te vinden.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=4cm]{bisector.png}
+	\label{fig:bisector}
+	\caption{Middelloodlijn, de twee stippen geven \texttt{p1} en \texttt{p2} aan}
+\end{figure}
 
+
+\section{Koch's Curve gen0}
+Maak de functie
+\begin{lstlisting}
+	void kochCurve(PVector p1, PVector p2) {
+	}
+\end{lstlisting}
+Deze functie tekent de volgende figuur tussen \texttt{p1} en \texttt{p2}:
+
+\section{[Bonus] Grasspriet}
 
 \input{footer.tex}
