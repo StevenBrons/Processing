@@ -49,7 +49,7 @@ Bekijk de volgende voorbeelden. Ga per regel na of je snapt wat er gebeurd. Pas 
 	\item \texttt{chess}
 \end{enumerate}
 
-\section{Do you want to build a snowman?}
+\section{Opdrachten}
 Je gaat de eerste code schrijven! Zorg ervoor je een nieuwe \textit{sketch} aanmaakt.
 \subsection{Een cirkel}
 Plak de volgende code in je lege sketch. Run de sketch om te kijken wat dit doet!
@@ -62,6 +62,7 @@ void draw() {
 }
 \end{lstlisting}
 Pas de code aan zodat de cirkel in het midden van het scherm staat.
+\remark{Oudere versies van Processing hebben geen \texttt{circle(x,y,radius)} functie. Gebruik dan \texttt{elipse(x,y,width,height)}}
 \subsection{Het midden}
 Als je de grote van het scherm aanpast (pas de arguments van \texttt{size} aan), zul je zien dat de cirkel niet meer in het midden staat.
 Gebruik de variabelen \texttt{width} en \texttt{height} om het midden van het scherm te berekenen. Zorg ervoor dat de cirkel in het midden van het scherm blijft staan, onafhankelijk van de grote van het scherm.
@@ -90,7 +91,8 @@ Voeg de volgende function toe:
     void mouseClicked() {
     }
 \end{lstlisting}
-Deze function word uitgevoerd op het moment dat je met de muis op de sketch klikt. Zorg ervoor dat er een sneeuwpop op de plek van de muis verschijnt als je klikt. (tip: zoek op het internet naar een manier om de muis co\"ordinaten te krijgen)
+Deze function word uitgevoerd op het moment dat je met de muis op de sketch klikt. Zorg ervoor dat er een sneeuwpop op de plek van de muis verschijnt als je klikt. 
+\tip{Zoek op het internet naar een manier om de muis co\"ordinaten te krijgen}
 \subsection{[Bonus] Hogere sneeuwmannen}
 Pas de function \texttt{drawSnowman} aan zodat er nog een derde variable is:
 \begin{lstlisting}

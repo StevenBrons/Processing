@@ -15,7 +15,15 @@
 \item\myhref{https://www.youtube.com/watch?v=mWJkvxQXIa8\&list=PLRqwX-V7Uu6ZwSmtE13iJBcoI-r4y7iEc}{Vectors - The Nature of Code}\\Alleen \textbf{1.1, 1.2, 1.3, 1.4}
 \end{itemize}
 
-\section{Vectoren}
+\section{Voorbeelden}
+\begin{enumerate}
+	\item \texttt{star}
+	\item \texttt{square}
+	\item \texttt{forest}
+	\item \texttt{flower}
+\end{enumerate}
+
+\section{Opdrachten}
 Omdat het onhandig is om telkens twee argumenten mee te moeten geven voor een positie op het scherm \texttt{int x, int y} en we een betere manier nodig hebben om met co\"ordinaten om te gaan bestaat er in Processing de \texttt{PVector} class.
 
 \subsection{[optioneel] Vectoren in de wiskunde}
@@ -90,7 +98,7 @@ Processing heeft de class \texttt{PVector}, met daarin een heleboel handige meth
 		circle(v.x,v.y,5);
 	}
 \end{lstlisting}
-\textbf{Let op! De oorsprong (0,0) zit bij computers links boven, en niet links onder zoals bij de meeste wiskundige grafieken! De y-as is als het ware gespiegeld!}\\
+\remark{De oorsprong (0,0) zit bij computers links boven, en niet links onder zoals bij de meeste wiskundige grafieken! De y-as is als het ware gespiegeld!}
 Op welke co\"ordinaten tekent dit stukje code een stip?
 Schrijf je antwoord in een \textit{comment} van je sketch:
 
@@ -101,31 +109,31 @@ Een gelijkzijdige polygoon of veelhoek is een figuur met \texttt{n} hoeken en li
 	}
 \end{lstlisting}
 Deze functie moet een polygoon van \texttt{int n} hoeken tekenen met een straal van \texttt{int radius}. Maak gebruik van vectoren en gebruik de \texttt{rotate(float angle)} method. \\
-\textbf{Let op!} Een hoek wordt niet in graden uitgedrukt maar in radialen, dit betekent dat \'e\'en cirkel (dus 360 graden) gelijk is aan $2 * \pi$, ofwel: \texttt{2 * PI}.
+\opmerking{Een hoek wordt niet in graden uitgedrukt maar in radialen, dit betekent dat \'e\'en cirkel (dus 360 graden) gelijk is aan $2 * \pi$, ofwel: \texttt{2 * PI}.}
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{polygon.png}
-	\label{fig:polygon}
 	\caption{Polygonen met n = 3, 4, 5 en 17}
+	\label{fig:polygon}
 \end{figure}
 
 
-\section{Middelloodlijn}
+\subsection{Middelloodlijn}
 Maak de volgende functie aan:
 \begin{lstlisting}
 	void bisector(PVector p1, PVector p2) {
 	}
 \end{lstlisting}
-Deze functie moet de middelloodlijn tekenen van de twee functies met de lengte gelijk aan de afstand tussen de twee functies (zie figuur \ref{fig:bisector}). \textbf{Tip:} Probeer eerst op papier een aantal middelloodlijnen te tekenen en probeer vervolgens om de twee punten waartussen de lijn getrokken moet worden te vinden.
-\begin{figure}[h!]
+Deze functie moet de middelloodlijn tekenen van de twee functies met de lengte gelijk aan de afstand tussen de twee functies (zie figuur \ref{fig:bisector}). \tip{Probeer eerst op papier een aantal middelloodlijnen te tekenen en probeer vervolgens om de twee punten waartussen de lijn getrokken moet worden te vinden.}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=4cm]{bisector.png}
-	\label{fig:bisector}
 	\caption{Middelloodlijn, de twee stippen geven \texttt{p1} en \texttt{p2} aan}
+	\label{fig:bisector}
 \end{figure}
 
 
-\section{Koch's Curve gen0}
+\subsection{Koch's Curve generatie 1}
 Maak de functie
 \begin{lstlisting}
 	void kochCurve(PVector p1, PVector p2) {
@@ -135,16 +143,16 @@ Deze functie tekent de volgende figuur tussen \texttt{p1} en \texttt{p2}:
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{koch.png}
-	\label{fig:koch}
 	\caption{Koch's curve gen 0}
+	\label{fig:koch}
 \end{figure}
 Hierbij ligt \texttt{m2} midden tussen \texttt{p1} en \texttt{p2}.\\
 De afstand tussen \texttt{p1} en \texttt{m1} is even groot als de afstand tussen \texttt{m2} en \texttt{t}.\\
 \texttt{m1} ligt op $\frac{1}{3}$ afstand van \texttt{p1} naar \texttt{p2}.\\
 \texttt{m3} ligt op $\frac{2}{3}$ afstand van \texttt{p1} naar \texttt{p2}.\\
-\textbf{Tip:} Dit is een redelijk complexe opdracht. Teken dit eerst uit, en probeer al voordat je begint met coderen te weten \textit{wat} je precies gaat coderen. Maak gebruik van de \texttt{dist} \texttt{rotate} en \texttt{mult} PVector methods.
+\tip{Dit is een redelijk complexe opdracht. Teken dit eerst uit, en probeer al voordat je begint met coderen te weten \textit{wat} je precies gaat coderen. Maak gebruik van de \texttt{dist} \texttt{rotate} en \texttt{mult} PVector methods.}
 
-\section{[Bonus] Hilbert's Curve}
+\subsection{[Bonus] Hilbert's Curve}
 Maak de volgende functie:
 \begin{lstlisting}
 	void hilbertCurve(PVector p1,PVector p2) {
@@ -154,8 +162,8 @@ Die de volgende figuur (figuur \ref{fig:koch}) tekent:
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=4cm]{hilbert.png}
-	\label{fig:koch}
 	\caption{Hilbert's Curve}
+	\label{fig:koch}
 \end{figure}
 
 \input{footer.tex}
