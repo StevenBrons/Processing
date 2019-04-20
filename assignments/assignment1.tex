@@ -1,115 +1,41 @@
-\newcommand{\tttt}{Sneeuwpop}
-\newcommand{\dddd}{Datum 1}
+\documentclass{../qh_assignment}
+\graphicspath{ {./images/} }
 
-\input{header.tex}
+\begin{document}
 
-\section{Introductie}
-In deze module Processing ga je coderen in het Processing framework. Er wordt veel gebruik gemaakt de video's en de website van \textbf{Daniel Shiffman}. Het is aan jezelf de bronnen die aangeleverd worden ook te gebruiken. Voor elke assignment is het de bedoeling dat je alle opdrachten maakt en inlevert voor de door de begeleider gegeven inlever datum.\\
-Verder kan het voorkomen dat er voor bepaalde opdrachten of bronnen \texttt{[Optioneel]} staat. Dit geeft aan dat je dit materiaal niet hoeft in te leveren. Als je de stof moeilijk vindt (of meer wil weten) worden deze opdrachten sterk aangeraden.
-Voor sommige opdrachten staat \texttt{[Bonus]}, doe deze opdrachten als je extra verdieping en uitdaging wil.
-
-\section{Leerdoelen}
-Deze week leer je omgaan met de volgende concepten:
-\begin{itemize}
-    \item Variabelen: \texttt{int}
-    \item Standaard functions: 
-    \begin{itemize}
-	\item    \texttt{size(int width,int height)
-	\item circle(int x, int y, int r)
-	\item random(float bound)
-	\item stroke(float r,float g,float b)
-	\item fill(float r,float g,float b)
-	\item background(float r,float g, float b)
-	\item strokeWeight(int w)}
-	\end{itemize}   
-	\item Globale variablen: \texttt{width, height, mouseX, mouseY}     
-    \item Het aanroepen van functions
-    \item Het maken van eigen functions
-    \item Het gebruiken van for-loops
-    \item Standaard operatoren: \texttt{a + b, a - b, a * b,a / b, a \% b,a \textasciicircum{} b}
-\end{itemize}
-
-\section{Uitleg}
-\begin{itemize}
-	\item\myhref{https://hello.processing.org/editor/}{Interactive Processing Editor}
-	\item\texttt{[Optioneel] }\myhref{https://www.youtube.com/watch?v=2VLaIr5Ckbs\&list=PLRqwX-V7Uu6ZYJC7L-r6rX6utt6wwJCyi}{Introduction - Processing Tutorial}
-	\item\myhref{https://www.youtube.com/watch?v\=a562vsSI2Po\&list=PLRqwX-V7Uu6bsRnSEJ9tRn4V\_XCGXovs4}{Pixels - Processing Tutorial}
-	\item\myhref{https://www.youtube.com/watch?v\=5N31KNgOO0g\&list=PLRqwX-V7Uu6Yo4VdQ4ZTtqRQ1AE4t\_Ep9}{Processing Environment - Processing Tutorial}
-	\item\myhref{https://www.youtube.com/watch?v\=o8dffrZ86gs\&list=PLRqwX-V7Uu6by61pbhdvyEpIeymlmnXzD}{Interaction - Processing Tutorial}\\
-	Alleen \textbf{3.1}
-	\item\myhref{https://www.youtube.com/watch?v=B\-ycSR3ntik\&list=PLRqwX-V7Uu6aFNOgoIMSbSYOkKNTo89uf}{Variables - Processing Tutorial}\\
-	Alleen \textbf{4.1}
-\end{itemize}
-
-
-\section{[optioneel] Voorbeelden}
-Bekijk de volgende voorbeelden. Ga per regel na of je snapt wat er gebeurd. Pas eventueel wat dingen aan om te kijken wat het effect is. Als je codeert mag je het internet en de voorbeelden altijd gebruiken, maak hier dus gebruik van!
-\begin{enumerate}
-	\item \texttt{houses}
-	\item \texttt{chess}
-\end{enumerate}
-
-\section{Opdrachten}
-Je gaat de eerste code schrijven! Zorg ervoor je een nieuwe \textit{sketch} aanmaakt.
-\subsection{Een cirkel}
-Plak de volgende code in je lege sketch. Run de sketch om te kijken wat dit doet!
+\section{Koch's Curve generatie 1}
+Maak de functie
 \begin{lstlisting}
-void setup() {
-    size(500,500);
-    circle(100,100,70);
-}
-void draw() {
-}
+	void kochCurve(PVector p1, PVector p2) {
+	}
 \end{lstlisting}
-Pas de code aan zodat de cirkel in het midden van het scherm staat.
-\remark{Oudere versies van Processing hebben geen \texttt{circle(x,y,radius)} functie. Gebruik dan \texttt{elipse(x,y,width,height)}}
-\subsection{Het midden}
-Als je de grote van het scherm aanpast (pas de arguments van \texttt{size} aan), zul je zien dat de cirkel niet meer in het midden staat.
-Gebruik de variabelen \texttt{width} en \texttt{height} om het midden van het scherm te berekenen. Zorg ervoor dat de cirkel in het midden van het scherm blijft staan, onafhankelijk van de grote van het scherm.
-\subsection{Een sneeuwpop}
-Maak een sneeuwpop door twee cirkels half-boven de eerste cirkel te tekenen. Zorg ervoor dat deze cirkels ook op de juiste plek blijven staan als je de schermgrootte veranderd!
-\subsection{Een function}
-Het tekenen van de sneeuwpop is een simpel \textbf{algoritme}. Als je een programma wil maken is het enorm belangrijk je het op te delen. Dit opdelen gebeurd onder meer door het maken van \textbf{functions}. Plaats de volgende function \textbf{helemaal onderaan} je de sketch.
-\begin{lstlisting}
-void drawSnowman(int x, int y) {
-}
-\end{lstlisting}
-Plaats de volgende regel code onderaan in \texttt{setup}.
-\begin{lstlisting}
-    drawSnowman(int(random(width)),int(random(height)));
-\end{lstlisting}
-Verplaats het tekenen van je sneeuwpop naar de \texttt{drawSnowman} function. Het is belangrijk dat je de sneeuwman op de co\"ordinaten \texttt{x,y} plaatst.
+Deze functie tekent de volgende figuur tussen \texttt{p1} en \texttt{p2}:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{koch.png}
+	\caption{Koch's curve gen 0}
+	\label{fig:koch}
+\end{figure}
+\noindent
+Hierbij ligt \texttt{m2} midden tussen \texttt{p1} en \texttt{p2}.\\
+De afstand tussen \texttt{p1} en \texttt{m1} is even groot als de afstand tussen \texttt{m2} en \texttt{t}.\\
+\texttt{m1} ligt op $\frac{1}{3}$ afstand van \texttt{p1} naar \texttt{p2}.\\
+\texttt{m3} ligt op $\frac{2}{3}$ afstand van \texttt{p1} naar \texttt{p2}.\\
+\tip{Dit is een redelijk complexe opdracht. Teken dit eerst uit, en probeer al voordat je begint met coderen te weten \textit{wat} je precies gaat coderen. Maak gebruik van de \texttt{dist} \texttt{rotate} en \texttt{mult} PVector methods.}
 
-\subsection{Meer sneeuwpoppen}
-Maak een \texttt{for} loop in de \texttt{setup} die 10 sneeuwpoppen op willekeurige plekken op het scherm plaatst.
-\subsection{Gekleurde sneeuwpoppen}
-In de wereld van code kan alles! Waarom zouden we ons limiteren tot witte sneeuwpoppen?
-Zorg ervoor dat alle sneeuwpoppen verschillende kleuren hebben!
-\subsection{Nog meer sneeuwpoppen}
-Voeg de volgende function toe:
+\newpage
+\section{[Bonus] Hilbert's Curve}
+Maak de volgende functie:
 \begin{lstlisting}
-    void mouseClicked() {
-    }
+	void hilbertCurve(PVector p1,PVector p2) {
+	} 
 \end{lstlisting}
-Deze function word uitgevoerd op het moment dat je met de muis op de sketch klikt. Zorg ervoor dat er een sneeuwpop op de plek van de muis verschijnt als je klikt. 
-\tip{Zoek op het internet naar een manier om de muis co\"ordinaten te krijgen}
-\subsection{[Bonus] Hogere sneeuwmannen}
-Pas de function \texttt{drawSnowman} aan zodat er nog een derde variable is:
-\begin{lstlisting}
-    void drawSnowman(int x, int y, int n) {
-    }
-\end{lstlisting}
-Deze derde variable geeft de hoogte van de sneeuwpop aan. Zorg ervoor dat ook de hoogte (het aantal cirkels) variabel is! Let op! De cirkels moeten zowel kleiner worden, als boven op elkaar gestapeld worden! Zorg dat je ook 100-ballen-hoge sneeuwpoppen kunt maken! Pas vervolgens 
-\begin{lstlisting}
-    drawSnowman(int(random(width)),int(random(height)));
-\end{lstlisting}
-aan zodat de sneeuwpoppen tussen de \texttt{2} en \texttt{6} hoog zijn.
-\subsection{[Bonus] Sneeuwmannen dans}
-Maak de function \texttt{makeCirle}, met als parameters een \texttt{int n}
-\begin{lstlisting}
-    void makeCircle(int n) {
-    }
-\end{lstlisting}
-Deze function moet \texttt{n} sneeuwmannen in een cirkel om het midden van het scherm tekenen. De sneeuwmannen moeten allemaal op gelijke afstand van elkaar staan.
+Die de volgende figuur (figuur \ref{fig:koch}) tekent:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=4cm]{hilbert.png}
+	\caption{Hilbert's Curve}
+	\label{fig:koch}
+\end{figure}
 
-\input{footer.tex}
+\end{document}
