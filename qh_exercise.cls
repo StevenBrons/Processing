@@ -1,6 +1,6 @@
-\LoadClass{qh_global}
+\LoadClass{../qh_global}
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
-\ProvidesPackage{qh_exercuise}[q\-highschool exercise style]
+\ProvidesPackage{qh_exercise}[q\-highschool exercise style]
 
 % \begin{itemize}
 %     \item \myhref{http://www.github.com/StevenBrons/Processing}{GitHub Pagina} 

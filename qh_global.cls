@@ -1,6 +1,6 @@
 \LoadClass{article}
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
-\ProvidesPackage{qh-assignment}[q\-highschool global style]
+\ProvidesPackage{qh_global}[q\-highschool global style]
 
 \RequirePackage{float}
 \RequirePackage[utf8]{inputenc}
@@ -16,7 +16,6 @@
 \RequirePackage{titlesec}
 \RequirePackage{fancyhdr}
 \RequirePackage[useregional]{datetime2}
-\RequirePackage{svg}
 \RequirePackage{geometry}
 \geometry{
     a4paper,
@@ -25,9 +24,10 @@
     footskip=2cm
 }
 
+
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\includegraphics[width=4cm]{logo_qhighschool.png}}
+\fancyhead[L]{\includegraphics[width=4cm]{../logo_qhighschool.png}}
 \fancyfoot[R]{\thepage}
 \fancyfoot[C]{versie 1.0}
 \fancyfoot[L]{\today}
