@@ -1,0 +1,110 @@
+\documentclass{../qh_exercise}
+\graphicspath{ {./images/} }
+
+\begin{document}
+
+\section{Leerdoelen}
+\begin{itemize}
+    \item Het maken en gebruiken van classes
+    \item Het maken van methods
+    \item Het werken met een ArrayList
+\end{itemize}
+
+\section{Uitleg}
+\begin{itemize}
+    \item \myhref{https://natureofcode.com/book/chapter-4-particle-systems/}{Particle Systems - The Nature of Code}\\
+    Alleen \textbf{4.1, 4.2, 4.3, 4.4, 4.5}
+    \item \myhref{https://www.youtube.com/watch?v=vdgiqMkFygc&list=PLRqwX-V7Uu6Z9hI4mSgx2FlE5w8zvjmEy&index=1}{Chapter 2. Particle Systems}\\
+    Alleen \textbf{4.1, 4.2, 4.3, 4.4, 4.5}\\
+\end{itemize}
+
+\newpage
+\section{Opdrachten}
+Deze week gaan we voor het eerst \textit{beweging} maken! Voortaan is het belangrijk dat je alleen maar tekent in de \texttt{draw} functie. 
+
+\subsection{Een class}
+Het is super handig om bepaalde variabelen en functies op die variabelen samen in \'e\'en object te bundelen. Hiervoor gebruiken we een \textbf{class}. In een class kun je meerdere variabelen en functies stoppen. Zorg ervoor dat je goed snapt hoe de volgende sketch werkt:
+\begin{lstlisting}
+Ball ball1;
+Ball ball2;
+
+void setup() {
+    size(500,500);
+    ball1 = new Ball(new PVector(width / 2, height / 2));
+    ball2 = new Ball(new PVector(width / 2, 0));
+}
+
+void draw() {
+    background(255);
+    ball1.move();
+    ball1.draw();
+    ball2.move();
+    ball2.draw();
+}
+
+class Ball {
+    // Variabelen van deze class
+    PVector pos = new PVector(width / 2,height / 2);
+    PVector gravity = new PVector(0,5);
+    
+    // De constructor
+    Ball(PVector beginPos) {
+        this.pos = beginPos;
+    }
+    
+    void move() {
+        pos.add(gravity);
+    }
+    
+    void draw() {
+        circle(pos.x,pos.y,50);
+    }
+}
+\end{lstlisting}
+Pas de code aan zodat je naast de begin positie van de bal, ook de kleur kan aangeven.
+
+\newpage
+\subsection{Stuiterballen}
+Pas de sketch aan door het volgende toe te voegen (en de method \texttt{move} te vervangen).
+\begin{lstlisting}
+    PVector bounceForce = new PVector(0,0);
+
+    void move () {
+        bounceIfBottom();
+        pos.add(grivity);
+        pos.add(bounceForce);
+        bounceForce.mult(0.9);
+    }
+
+    void bounceIfBottom() {
+        //TODO
+    }
+\end{lstlisting}
+Deze method moet de bal laten stuiteren als deze de onderkant van het scherm raakt. 
+
+\subsection{Een ArrayList}
+In het de sketch van de vorige opdracht worden er twee variabelen gebruikt (\texttt{ball1} en \texttt{ball2}) om de ballen op te slaan. Maar wat nu als we 4 ballen op willen slaan, of 100000? We willen niet een hele lijst met variabelen maken natuurlijk. Daarom gebruiken we een \texttt{ArrayList}. \\
+Vervang de bovenste paar regels door:
+\begin{lstlisting}
+ArrayList<Ball> balls = new ArrayList();
+
+void setup() {
+    size(500,500);
+    balls.add(new Ball(new PVector(width / 2, height / 2)));
+    balls.add(new Ball(new PVector(width / 2, 0)));
+}
+
+void draw() {
+    background(255);
+    for (Ball ball : balls) {
+      ball.move();
+      ball.draw();
+    }  
+}
+\end{lstlisting}
+Pas de code aan zodat je 100 ballen op willekeurige plekken maakt!
+\tip{Je krijgt een willekeurig getal door \texttt{int(random(maximum\_hoeveelheid))}}
+
+
+
+\end{document}
