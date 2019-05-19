@@ -3,7 +3,66 @@
 
 \begin{document}
 
-\section{Koch's Curve generatie 1}
+\section{Pong}
+Voor deze opdracht zul je het klassieke spel Pong gaan maken. Als je nog nooit gehoord hebt van dit spel moet je het even opzoeken om te weten waar we het over hebben (zoek op \texttt{pong game}). Je sketch moet minimaal aan de volgende eisen voldoen. Je bent verder helemaal vrij extra functionaliteit toe te voegen. 
+\begin{itemize}
+    \item Een bal
+    \item Een door de gebruiker bestuurbaar batje
+    \item Stuiter-functionaliteit
+\end{itemize}
+Om je een beetje te helpen staat er onderaan een stappenplan. Je hoeft dit niet te volgen, maar is wel aan te raden als je het moeilijk vind.
+\begin{enumerate}
+    \item Gebruik het volgende opzetje:
+        \begin{lstlisting}
 
+        \end{lstlisting}
+    \item Maak een \textbf{Ball} class met de volgende methods:
+        \begin{lstlisting}
+        class Ball {
+            PVector pos;
+            PVector vel; 
+            int radius = 50;
+            
+            Ball () {
+                pos = new PVector(width / 2,height / 2);
+                vel = new PVector(-10,2);
+            }
+            
+            void move() {
+                //TODO
+            }
+            
+            void bounce() {
+                //TODO
+            }
+        }    
+        \end{lstlisting}
+        \item Maak een \textbf{Wall} class met de volgende methods:
+        \begin{lstlisting}
+        class Wall {
+            PVector topLeft;
+            PVector bottomRight;
+            
+            Wall(PVector topLeft2, PVector bottomRight2) {
+                topLeft = topLeft2;
+                bottomRight = bottomRight2;
+            }
+            
+            boolean intersects(Ball b) {
+                //TODO
+            }
+        }    
+        \end{lstlisting}
+\end{enumerate}
+
+\section{Bonus functionaliteit}
+Voeg extra features aan je sketch toe. Hier onder is een lijst met voorbeelden van extra dingen, je mag natuurlijk ook zelf iets leuks bedenken.
+\begin{itemize}
+    \item Het bijhouden van de score (en tonen op het scherm)
+    \item Meerdere ballen tegelijk
+    \item Multiplayer (geef de andere speler twee andere toetsen)
+    \item Power-ups
+    \item Meerdere levels
+\end{itemize}
 
 \end{document}
