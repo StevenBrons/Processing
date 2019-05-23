@@ -6,21 +6,30 @@
 \section{Leerdoelen}
 \begin{itemize}
     \item Het maken en gebruiken van classes
+    \item Het gebruiken van objecten (instances of classes)
     \item Het maken van methods
     \item Het werken met een ArrayList
 \end{itemize}
 
 \section{Uitleg}
 \begin{itemize}
+    \item \myhref{https://www.youtube.com/watch?v=YcbcfkLzgvs&list=PLRqwX-V7Uu6bb7z2IJaTlzwzIg_5yvL4i}{8: Object-Oriented Programming}
+    \item \myhref{https://www.youtube.com/watch?v=NptnmWvkbTw&list=PLRqwX-V7Uu6bO9RKxHObluh-aPgrrvb4a&index=1}{9: Arrays en ArrayList}
     \item \myhref{https://natureofcode.com/book/chapter-4-particle-systems/}{Particle Systems - The Nature of Code}\\
     Alleen \textbf{4.1, 4.2, 4.3, 4.4, 4.5}
     \item \myhref{https://www.youtube.com/watch?v=vdgiqMkFygc&list=PLRqwX-V7Uu6Z9hI4mSgx2FlE5w8zvjmEy&index=1}{Chapter 2. Particle Systems}\\
     Alleen \textbf{4.1, 4.2, 4.3, 4.4, 4.5}\\
 \end{itemize}
 
+\section{Voorbeelden}
+\begin{itemize}
+    \item clouds
+    \item ball
+\end{itemize}
+
 \newpage
 \section{Opdrachten}
-Deze week gaan we voor het eerst \textit{beweging} maken! Voortaan is het belangrijk dat je alleen maar tekent in de \texttt{draw} functie. 
+Deze week gaan we voor het eerst \textit{beweging} maken! Voortaan is het belangrijk dat je alleen maar tekent in de \texttt{draw} functie. Het is extra belangrijk dat je de uitlegvideo's over Object G\"eorienteerd Programmeren!
 
 \subsection{Een class}
 Het is super handig om bepaalde variabelen en functies op die variabelen samen in \'e\'en object te bundelen. Hiervoor gebruiken we een \textbf{class}. In een class kun je meerdere variabelen en functies stoppen. Zorg ervoor dat je goed snapt hoe de volgende sketch werkt:
@@ -83,26 +92,8 @@ Pas de sketch aan door het volgende toe te voegen (en de method \texttt{move} te
 Deze method moet de bal laten stuiteren als deze de onderkant van het scherm raakt. 
 
 \subsection{Een ArrayList}
-In het de sketch van de vorige opdracht worden er twee variabelen gebruikt (\texttt{ball1} en \texttt{ball2}) om de ballen op te slaan. Maar wat nu als we 4 ballen op willen slaan, of 100000? We willen niet een hele lijst met variabelen maken natuurlijk. Daarom gebruiken we een \texttt{ArrayList}. \\
-Vervang de bovenste paar regels door:
-\begin{lstlisting}
-ArrayList<Ball> balls = new ArrayList();
-
-void setup() {
-    size(500,500);
-    balls.add(new Ball(new PVector(width / 2, height / 2)));
-    balls.add(new Ball(new PVector(width / 2, 0)));
-}
-
-void draw() {
-    background(255);
-    for (Ball ball : balls) {
-      ball.move();
-      ball.draw();
-    }  
-}
-\end{lstlisting}
-Pas de code aan zodat je 100 ballen op willekeurige plekken maakt!
+In het de sketch van de vorige opdracht worden er twee variabelen gebruikt (\texttt{ball1} en \texttt{ball2}) om de ballen op te slaan. Maar wat nu als we 4 ballen op willen slaan, of 100000? We willen niet een hele lijst met variabelen maken natuurlijk. Daarom gebruiken we een \texttt{ArrayList}. Pas je gemaakte sketch aan zodat je met behulp van een \texttt{ArrayList} zoveel bellen kan maken als je wil!
+Pas vervolgens de code aan zodat je 100 ballen op willekeurige plekken maakt!
 \tip{Je krijgt een willekeurig getal door \texttt{int(random(maximum\_hoeveelheid))}}
 
 
