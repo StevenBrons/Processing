@@ -1,6 +1,7 @@
 \LoadClass{article}
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{qh_global}[q\-highschool global style]
+\usepackage[dutch]{babel}
 
 \RequirePackage{float}
 \RequirePackage[utf8]{inputenc}
@@ -24,7 +25,7 @@
     footskip=2cm
 }
 
-
+\setlength\parindent{0pt}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\includegraphics[width=4cm]{../logo_qhighschool.png}}
