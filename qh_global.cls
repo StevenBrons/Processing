@@ -1,6 +1,6 @@
-\LoadClass{article}
+\LoadClass{report}
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
-\ProvidesPackage{qh_global}[q\-highschool global style]
+\ProvidesPackage{./qh_global}[q\-highschool global style]
 \usepackage[dutch]{babel}
 
 \RequirePackage{float}
@@ -18,6 +18,7 @@
 \RequirePackage{fancyhdr}
 \RequirePackage[useregional]{datetime2}
 \RequirePackage{geometry}
+\RequirePackage{subfiles}
 \geometry{
     a4paper,
     margin=4cm,
@@ -28,22 +29,12 @@
 \setlength\parindent{0pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\includegraphics[width=4cm]{../logo_qhighschool.png}}
+\fancyhead[L]{\includegraphics[width=4cm]{./logo_qhighschool.png}}
 \fancyfoot[R]{\thepage}
 \fancyfoot[C]{versie 1.0}
 \fancyfoot[L]{\today}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
-
-
-\titleformat{\section}
-  {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
-
-  
-  
-% allow line breaks in hrefs
-\renewcommand{\UrlBreaks}{\do\-\do\.\do\_\do\/\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X\do\Y\do\Z}
 
 %define colors
 \definecolor{primary}{rgb}{0.941, 0.514, 0.098}
@@ -51,6 +42,14 @@
 
 \definecolor{seconary}{rgb}{0, 0.420, 0.373}
 \definecolor{seconary_accent}{rgb}{0.388, 0.792, 0.671}
+
+\titleformat{\chapter}
+  [display]{\normalfont\bfseries}{}{0pt}{\Huge\centering}[{\titlerule[0.8pt]}]
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+  
+% allow line breaks in hrefs
+\renewcommand{\UrlBreaks}{\do\-\do\.\do\_\do\/\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X\do\Y\do\Z}
 
 \newcommand{\myhref}[2]{\href{#1}{#2}\\\path{#1}}
 \newcommand{\remark}[1]{

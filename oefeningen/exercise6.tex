@@ -1,5 +1,4 @@
-\documentclass{../qh_exercise}
-\graphicspath{ {./images/} }
+\documentclass[../syllabus.tex]{subfiles}
 
 \begin{document}
 
@@ -43,17 +42,17 @@ Zorg er vervolgens voor dat alle particles getekent worden (doe dit dus uiteraar
 
 \subsection{Het updaten}
 Maak een \texttt{update} method in \texttt{particle} die ervoor zorgt dat de deeltjes omhoog vliegen en een klein beetje naar links of rechts
-\remark{Het is hier dus super handig als je gebruik maakt van een \textt{PVector}}
+\remark{Het is hier dus super handig als je gebruik maakt van een \texttt{PVector}}
 
 \subsection{Lifetime}
 We willen dat \'e\'en vuurdeeltje na een tijdje verdwijnt. Dit kun je doen door een variable \texttt{float lifetime = 255;} te maken. Elke update haal je hier \texttt{1} vanaf \texttt{lifetime--;}. Vervolgens moet je tijdens het updaten checken of \texttt{lifetime < 0}. Is dit het geval, dan moet je het deeltje uit de ArrayList halen (\texttt{particles.remove(particle)}, waar \texttt{particles} de ArrayList is, en \texttt{particle} het deeltje wat je wil weghalen).
 
 \subsection{Kleur veranderen}
 Zorg ervoor dat de vuur deeltjes meer doorzichtig worden naarmate ze korter te leven hebben.
-\tip{Gebruik \texttt{fill(color,alpha)} waar bijvoorbeeld \textt{color = color(255,50,0)} en \textt{alpha} tussen \textt{0} en \texttt{255}}
+\tip{Gebruik \texttt{fill(color,alpha)} waar bijvoorbeeld \texttt{color = color(255,50,0)} en \texttt{alpha} tussen \texttt{0} en \texttt{255}}
 
 \subsection{Vuur!}
-Voeg elke keer dat \textt{draw} wordt aangeroepen een nieuwe particle toe aan de ArrayList zodat een prachtig vuur ontstaat!
+Voeg elke keer dat \texttt{draw} wordt aangeroepen een nieuwe particle toe aan de ArrayList zodat een prachtig vuur ontstaat!
 
 \subsection{Extra mooi vuur}
 Als je wil kun je ook nog extra dingen toevoegen:

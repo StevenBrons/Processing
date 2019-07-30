@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="introductie">Introductie</h1>
+<p>In deze module Processing ga je coderen in het Processing framework. Er wordt veel gebruik gemaakt de video’s en de website van <strong>Daniel Shiffman</strong>. Het is aan jezelf de bronnen die aangeleverd worden ook te gebruiken. Voor elke assignment is het de bedoeling dat je alle opdrachten maakt en inlevert voor de door de begeleider gegeven inlever datum.<br />
+Verder kan het voorkomen dat er voor bepaalde opdrachten of bronnen <code>[Optioneel]</code> staat. Dit geeft aan dat je dit materiaal niet hoeft in te leveren. Als je de stof moeilijk vindt (of meer wil weten) worden deze opdrachten sterk aangeraden. Voor sommige opdrachten staat <code>[Bonus]</code>, doe deze opdrachten als je extra verdieping en uitdaging wil.</p>
+<h1 id="leerdoelen">Leerdoelen</h1>
+<p>Deze week leer je omgaan met de volgende concepten:</p>
+<ul>
+<li><p>Variabelen: <code>int</code></p></li>
+<li><p>Standaard functions:</p>
+<ul>
+<li></li>
+</ul></li>
+<li><p>Globale variablen: <code>width, height, mouseX, mouseY</code></p></li>
+<li><p>Het aanroepen van functions</p></li>
+<li><p>Het maken van eigen functions</p></li>
+<li><p>Het gebruiken van for-loops</p></li>
+<li><p>Standaard operatoren: <code>a + b, a - b, a * b,a / b, a % b,a ^ b</code></p></li>
+</ul>
+<h1 id="uitleg">Uitleg</h1>
+<ul>
+<li></li>
+<li><p><code>[Optioneel] </code></p></li>
+<li></li>
+<li></li>
+<li><p><br />
+Alleen <strong>3.1</strong></p></li>
+<li><p><br />
+Alleen <strong>4.1</strong></p></li>
+</ul>
+<h1 id="optioneel-voorbeelden">[optioneel] Voorbeelden</h1>
+<p>Bekijk de volgende voorbeelden. Ga per regel na of je snapt wat er gebeurd. Pas eventueel wat dingen aan om te kijken wat het effect is. Als je codeert mag je het internet en de voorbeelden altijd gebruiken, maak hier dus gebruik van!</p>
+<ol>
+<li><p><code>houses</code></p></li>
+<li><p><code>chess</code></p></li>
+</ol>
+<h1 id="opdrachten">Opdrachten</h1>
+<p>Je gaat de eerste code schrijven! Zorg ervoor je een nieuwe <em>sketch</em> aanmaakt.</p>
+<h2 id="een-cirkel">Een cirkel</h2>
+<p>Plak de volgende code in je lege sketch. Run de sketch om te kijken wat dit doet!</p>
+<pre><code>void setup() {
+    size(500,500);
+    circle(100,100,70);
+}
+void draw() {
+}</code></pre>
+<p>Pas de code aan zodat de cirkel in het midden van het scherm staat.</p>
+<h2 id="het-midden">Het midden</h2>
+<p>Als je de grote van het scherm aanpast (pas de arguments van <code>size</code> aan), zul je zien dat de cirkel niet meer in het midden staat. Gebruik de variabelen <code>width</code> en <code>height</code> om het midden van het scherm te berekenen. Zorg ervoor dat de cirkel in het midden van het scherm blijft staan, onafhankelijk van de grote van het scherm.</p>
+<h2 id="een-sneeuwpop">Een sneeuwpop</h2>
+<p>Maak een sneeuwpop door twee cirkels half-boven de eerste cirkel te tekenen. Zorg ervoor dat deze cirkels ook op de juiste plek blijven staan als je de schermgrootte veranderd!</p>
+<h2 id="een-function">Een function</h2>
+<p>Het tekenen van de sneeuwpop is een simpel <strong>algoritme</strong>. Als je een programma wil maken is het enorm belangrijk je het op te delen. Dit opdelen gebeurd onder meer door het maken van <strong>functions</strong>. Plaats de volgende function <strong>helemaal onderaan</strong> je de sketch.</p>
+<pre><code>void drawSnowman(int x, int y) {
+}</code></pre>
+<p>Plaats de volgende regel code onderaan in <code>setup</code>.</p>
+<pre><code>    drawSnowman(int(random(width)),int(random(height)));</code></pre>
+<p>Verplaats het tekenen van je sneeuwpop naar de <code>drawSnowman</code> function. Het is belangrijk dat je de sneeuwman op de coördinaten <code>x,y</code> plaatst.</p>
+<h2 id="meer-sneeuwpoppen">Meer sneeuwpoppen</h2>
+<p>Maak een <code>for</code> loop in de <code>setup</code> die 10 sneeuwpoppen op willekeurige plekken op het scherm plaatst.</p>
+<h2 id="gekleurde-sneeuwpoppen">Gekleurde sneeuwpoppen</h2>
+<p>In de wereld van code kan alles! Waarom zouden we ons limiteren tot witte sneeuwpoppen? Zorg ervoor dat alle sneeuwpoppen verschillende kleuren hebben!</p>
+<h2 id="nog-meer-sneeuwpoppen">Nog meer sneeuwpoppen</h2>
+<p>Voeg de volgende function toe:</p>
+<pre><code>    void mouseClicked() {
+    }</code></pre>
+<p>Deze function word uitgevoerd op het moment dat je met de muis op de sketch klikt. Zorg ervoor dat er een sneeuwpop op de plek van de muis verschijnt als je klikt.</p>
+<h2 id="extra-hogere-sneeuwmannen">[Extra] Hogere sneeuwmannen</h2>
+<p>Pas de function <code>drawSnowman</code> aan zodat er nog een derde variable is:</p>
+<pre><code>    void drawSnowman(int x, int y, int n) {
+    }</code></pre>
+<p>Deze derde variable geeft de hoogte van de sneeuwpop aan. Zorg ervoor dat ook de hoogte (het aantal cirkels) variabel is! Let op! De cirkels moeten zowel kleiner worden, als boven op elkaar gestapeld worden! Zorg dat je ook 100-ballen-hoge sneeuwpoppen kunt maken! Pas vervolgens</p>
+<pre><code>    drawSnowman(int(random(width)),int(random(height)));</code></pre>
+<p>aan zodat de sneeuwpoppen tussen de <code>2</code> en <code>6</code> hoog zijn.</p>
+<h2 id="extra-sneeuwmannen-dans">[Extra] Sneeuwmannen dans</h2>
+<p>Maak de function <code>makeCirle</code>, met als parameters een <code>int n</code></p>
+<pre><code>    void makeCircle(int n) {
+    }</code></pre>
+<p>Deze function moet <code>n</code> sneeuwmannen in een cirkel om het midden van het scherm tekenen. De sneeuwmannen moeten allemaal op gelijke afstand van elkaar staan.</p>
+</body>
+</html>
